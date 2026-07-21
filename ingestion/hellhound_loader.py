@@ -2,7 +2,7 @@ import os
 import json
 
 class HellhoundLoader:
-    def __init__(self, report_path="/hellhound-spider/hellhound_report.json"):
+    def __init__(self):
         self.report_path = report_path
 
     def load(self):
