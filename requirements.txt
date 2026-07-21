@@ -13,5 +13,3 @@ transformers
 accelerate
 bitsandbytes
 huggingface-hub
-#irm https://ollama.com/install.ps1 | iex
-#ollama pull qwen2.5:0.5b
