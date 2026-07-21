@@ -5,4 +5,4 @@ METADATA_DB_PATH=BASE_DIR / "data" / "metadata"
 OWASP_DATA_PATH=BASE_DIR / "data" / "owasp.json"
 BUG_BOUNTY_DATA_PATH=BASE_DIR / "data" / "bugbounty.json"
 CVE_DATA_PATH=BASE_DIR / "data" / "cve.json"
-
+report_path="/hellhound-spider/hellhound_report.json"
