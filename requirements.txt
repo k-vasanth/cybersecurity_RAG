@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sentence-transformers
+faiss-cpu
+rank_bm25
+sqlite-utils
+pydantic
+numpy
+pandas
+beautifulsoup4
+requests
+transformers
+accelerate
+bitsandbytes
+huggingface-hub
+#irm https://ollama.com/install.ps1 | iex
+#ollama pull qwen2.5:0.5b

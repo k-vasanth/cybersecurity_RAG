@@ -1,0 +1,23 @@
+{
+  "cSpell.words": [
+    "beautifulsoup",
+    "bugbounty",
+    "chunker",
+    "Embedder",
+    "faiss",
+    "fastapi",
+    "langchain",
+    "ntotal",
+    "numpy",
+    "ollama",
+    "pydantic",
+    "pymilvus",
+    "qwen",
+    "rerank",
+    "Reranker",
+    "scipy",
+    "smollm",
+    "uvicorn",
+    "WSTG"
+  ]
+}
