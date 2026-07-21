@@ -1,5 +1,6 @@
 import os
 import json
+from config.py import report_path
 
 class HellhoundLoader:
     def __init__(self):
