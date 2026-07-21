@@ -1,6 +1,6 @@
 import os
 import json
-from config.py import report_path
+from config import report_path
 
 class HellhoundLoader:
     def __init__(self):
@@ -27,8 +27,8 @@ class HellhoundLoader:
                     content = f"""
                     Endpoint: {url}
                     Method: {method}
-                    Parameters: {params}
-                    Raw finding: {obj}
+                    Parameters: {json.dumps(params, indent=2)}
+                    Raw finding: {json.dumps(obj, indent=2)}
                     """
                     documents.append({
                         "source": "hellhound",
@@ -36,6 +36,9 @@ class HellhoundLoader:
                         "url": url,
                         "content": content
                     })
+                else:
+                    for value in obj.values():
+                        walk(value)
 
                 for value in obj.values():
                     walk(value)
