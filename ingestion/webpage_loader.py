@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from config import FILE_DATA_PATH
 
 
-class webpageLoader:
+class WebpageLoader:
     def __init__(self):
         self.sources = [
             "https://owasp.org/Top10/2025/",
