@@ -1,10 +1,10 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-from config import OWASP_DATA_PATH
+from config import FILE_DATA_PATH
 
 
-class WebpageLoader:
+class webpageLoader:
     def __init__(self):
         self.sources = [
             "https://owasp.org/Top10/2025/",
@@ -18,6 +18,8 @@ class WebpageLoader:
             "https://attack.mitre.org/techniques/T1059/",
             "https://attack.mitre.org/techniques/T1190/",
             "https://attack.mitre.org/techniques/T1078/",
+            "https://attack.mitre.org/tactics/TA0043/",
+            "https://attack.mitre.org/tactics/TA0001/",
             "https://www.exploit-db.com/exploits/40936",
             "https://www.exploit-db.com/exploits/40990",
             "https://www.exploit-db.com/exploits/47967",
@@ -88,7 +90,7 @@ class WebpageLoader:
         return "\n".join(lines)
 
     def load(self):
-        OWASP_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
+        FILE_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
 
         documents = []
 
@@ -110,7 +112,7 @@ class WebpageLoader:
                 "url": url
             })
 
-        with open(OWASP_DATA_PATH, "w", encoding="utf-8") as f:
+        with open(FILE_DATA_PATH, "w", encoding="utf-8") as f:
             json.dump(documents, f, indent=2, ensure_ascii=False)
 
         return documents
