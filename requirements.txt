@@ -9,7 +9,11 @@ numpy
 pandas
 beautifulsoup4
 requests
+airllm
 transformers
 accelerate
 bitsandbytes
 huggingface-hub
+accelerate
+sentencepiece
+safetensors
