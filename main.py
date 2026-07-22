@@ -13,8 +13,7 @@ import os
 def pipeline():
 
     documents = []
-    documents.extend(OWASPLoader().load())
-    documents.extend(HellhoundLoader("hellhound-spider/hellhound_report.json").load())
+    documents.extend(OWASPLoader().load()+HellhoundLoader().load())
     cleaner = TextCleaner()
     chunker = TextChunker()
     metadata_builder = MetadataBuilder()
