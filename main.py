@@ -1,4 +1,4 @@
-from ingestion.owasp_loader import OWASPLoader
+from ingestion.webpage_loader import WebpageLoader
 from ingestion.hellhound_loader import HellhoundLoader
 from processing.cleaner import TextCleaner
 from processing.chunker import TextChunker
@@ -13,7 +13,7 @@ import os
 def pipeline():
 
     documents = []
-    documents.extend(OWASPLoader().load()+HellhoundLoader().load())
+    documents.extend(WebpageLoader().load()+HellhoundLoader().load())
     cleaner = TextCleaner()
     chunker = TextChunker()
     metadata_builder = MetadataBuilder()
