@@ -12,8 +12,9 @@ import os
 
 def pipeline():
 
-    documents = []
-    documents.extend(WebpageLoader().load()+HellhoundLoader().load())
+    web_docs = WebpageLoader().load()
+    hellhound_docs = HellhoundLoader().load()
+    documents = web_docs + hellhound_docs
     cleaner = TextCleaner()
     chunker = TextChunker()
     metadata_builder = MetadataBuilder()
